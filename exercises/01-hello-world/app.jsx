@@ -1,12 +1,16 @@
-import React from "react"; // Main React.js library
+import React from "react";
+import ReactDOM from "react-dom";
 
-import ReactDOM from "react-dom"; // We use ReactDOM to render into the DOM
+// If we have a variable
+let age = "12";
+let name = "John";
 
-// WHAT: This variable contains the html to render
-let output = <span>James is 12 years old</span>;
+// We can use it in our html like this
+let output = (
+	<span>
+		James is <strong>12</strong> years old
+	</span>
+);
 
-// WHERE: A DOM element that will contain the entire react generated html
-const myDiv = document.querySelector("#myDiv");
-
-                //what  //where
-ReactDOM.render(output, myDiv);
+// Use react-dom to render it
+ReactDOM.render(output, document.querySelector("#myDiv"));
